@@ -1,0 +1,569 @@
+:root {
+    --navy: #07132F;
+    --navy-light: #0D1B3D;
+    --blue: #1E4E8C;
+    --pearl: #F1E8D5;
+    --gold: #C8A96B;
+    --white: #F7F3EA;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: var(--navy);
+    color: var(--white);
+}
+.hero{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navy-light);
+
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    line-height: 1.7;
+    background-image: url("fundo1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero p{
+    max-width: 750px;
+    font-size: 19px;
+    line-height: 1.6;
+    text-align: center;
+}
+.ac{
+    color: var(--navy);
+    background-color: var(--gold);
+
+    padding: 10px 20px;
+    border-radius: 25px;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600px;
+
+    transition: all 0.3s ease;
+}
+.ac:hover{
+    background-color: var(--pearl);
+    transform: translateY(-2px);
+}
+
+.sobre{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 80px;
+}
+.sobre-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    text-align: left;
+
+}
+.sobre-texto{
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.como-funciona{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navy-light);
+}
+.como-funciona h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 40px;
+
+    background-color: rgba(7,19,47,0.85);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: #aaaaaa;
+}
+.nav-links{
+    display: flex;
+    gap: 30px;
+    color: var(--pearl);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover{
+    color: var(--gold);
+}
+.nav-agendar{
+    color: var(--navy);
+    background-color: var(--gold);
+
+    padding: 10px 20px;
+    border-radius: 25px;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600px;
+
+    transition: all 0.3s ease;
+}
+
+.nav-agendar:hover{
+    background-color: var(--pearl);
+    transform: translateY(-2px);
+}
+
+.logo{
+    color: var(--pearl);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+.logo img{
+    height: 50px;
+    width: auto;
+    display: block;
+}
+.carrossel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carrossel img {
+    width: 500px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+.imagem-atual{
+    opacity: 1;
+}
+.imagem-proxima{
+    opacity: 0;
+}
+.instagram-link{
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 14px 10px;
+    border-radius: 25px;
+    background-color: #1E4E8C;
+}
+.instagram-link:hover{
+    color: var(--pearl);
+    transform: translateY(-5px);
+}
+.tipos-consulta{
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 40px 0;
+}
+.tipo-consulta{
+    background: transparent;
+    color: var(--pearl);
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 12px 40px;
+    font-family: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.tipo-consulta:hover{
+    color: var(--gold);
+}
+.tipo-consulta.ativo{
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+.conteudo-consulta{
+    max-width: 700px;
+    text-align: center;
+}
+.conteudo-consulta h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.conteudo-consulta p{
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    line-height: 1.7;
+}
+.agendamento{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 20px 80px;
+
+    background-image: url("fundo1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.agendamento h2{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+.agendamento > p{
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.opcoes-agendamento{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 350px;
+}
+
+.opcao-agendamento{
+    width: 100%;
+    background: transparent;
+    color: var(--pearl);
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 12px 40px;
+    min-width: 150px;
+    font-family: inherit;
+    font-size: 18px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.opcao-agendamento:hover{
+    color: var(--gold);
+}
+.opcao-agendamento.ativo{
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+.botao-horarios{
+    color: var(--navy);
+    background-color: var(--gold);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+.botao-horarios:hover{
+    background-color: var(--pearl);
+    transform: translateY(-2px);
+}
+.calendario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    width: 420px;
+    max-width: 100%;
+
+    padding: 30px 40px;
+
+    background-color: rgba(7, 19, 47, 0.8);
+    border: 1px solid rgba(200, 169, 107, 0.3);
+    border-radius: 20px;
+
+    margin-top: 30px;
+
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 0.4s ease, transform 0.4s;
+}
+.calendario.escondido{
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
+}
+.calendario h3{
+    margin: 0;
+    color: var(--pearl);
+    font-size: 24px;
+}
+.calendario input{
+    padding: 12px 18px;
+    
+    color: var(--pearl);
+    background-color: var(--navy-light);
+    
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 16px;
+    
+    cursor: pointer;
+}
+.dias{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 8px;
+    width: 350px;
+}
+.dias button.selecionado{
+    background-color: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
+}
+.dias-da-semana{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    width: 350px;
+    margin-bottom: 10px;
+
+}
+.dias-semana span{
+    text-align: center;
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 600;
+}
+.dias button{
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    justify-self: center;
+
+    background-color: transparent;
+    color: var(--pearl);
+
+    font-family: inherit;
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.dias button:hover{
+    background-color: var(--navy-light);
+    background-color: var(--gold);
+}
+.cabecalho-calendario{
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+width: 100%;
+max-width: 350px;
+}
+.cabecalho-calendario h3{
+    margin: 0;
+    color: var(--pearl);
+    font-size: 24px;
+}
+.cabecalho-calendario button{
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+
+    background-color: transparent;
+    color: var(--gold);
+
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.cabecalho-calendario button:hover{
+    background-color: var(--gold);
+    color: var(--navy);
+}
+.horarios{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+.horarios button{
+    padding: 10px 15px;
+
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+
+    background-color: transparent;
+    color: var(--pearl);
+
+    font-family: inherit;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+.horarios button:hover{
+    background-color: var(--gold);
+    color: var(--navy);
+}
+.horarios button.selecionado{
+    background-color: var(--gold);
+    color: var(--navy);
+
+}
+.modalidades{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 350px;
+    margin: 35px 0 20px;
+}
+
+.modalidade{
+    width: 100%;
+    background: transparent;
+    color: var(--pearl);
+    border: none;
+    border-bottom: 2px solid transparent;
+
+    padding: 12px 40px;
+
+    font-family: inherit;
+    font-size: 18px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.modalidade:hover{
+    color: var(--gold);
+}
+.modalidade.ativo{
+    color: var(--gold);
+    border-bottom-color:var(--gold) ;
+}
+.locais-presencial{
+    display: none;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 20px;
+}
+.local-presencial{
+    padding: 12px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    background-color: rgba(7, 19, 47, 0.7);
+    color: var(--pearl);
+
+    font-family: inherit;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+.local-presencial:hover{
+    background-color: var(--gold);
+    color: var(--navy);
+}
+.local-presencial.ativo{
+ background-color: var(--gold);
+ color: var(--navy);
+}
+.confirmar{
+    display: none;
+    padding: 12px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    background-color: rgba(7, 19, 47, 0.7);
+    color: var(--pearl);
+
+    font-family: inherit;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+.confirmar:hover{
+    background-color: var(--gold);
+    color: var(--navy);
+}
+.confirmar.confirmado{
+    background-color: var(--gold);
+    color: var(--navy);
+}
+.modal-cadastro{
+    display: none;
+}
+@media (max-width: 768px) {
+
+    .hero,
+    .sobre,
+    .como-funciona,
+    .agendamento,
+    .modal-cadastro {
+        min-height: 100vh;
+        padding: 100px 20px 40px;
+    }
+
+    .sobre {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+    }
+
+    .carrossel img {
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+    }
+}
+
+

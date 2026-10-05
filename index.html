@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Búzios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="#inicio">
+            <img src="logo.png" alt="Logo Jogo de Búzios">
+        </a>
+
+        <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#consultar">Consultar agendamento</a>
+
+        </div>
+
+         <a class="nav-agendar" href="#agendar">Agendar</a>
+        
+            
+    </nav>
+    <section class="hero" id="inicio">
+    <h1>Jogo de Búzios</h1>
+    <h3>Orientação, conhecimento e conexão através do jogo de búzios.</h3>
+    <p>
+        Conheça nosso trabalho, nossa casa e encontre um espaço para realizar sua consulta com acolhimento e confiança.
+    </p>
+
+    <button class="ac">Agendar consulta</button>
+    </section>
+    <section class="sobre" id="sobre">
+        <div class="sobre-texto">
+        <h1>O que é o jogo de búzios?</h1>
+
+ 
+
+        <p>
+            O jogo de búzios é uma forma tradicional de consulta aos orixás, utilizada para buscar orientação e compreender melhor diferentes caminhos e questões da vida. 
+            Através da leitura dos búzios, o consulente pode encontrar direcionamentos de acordo com aquilo que busca na consulta.
+        </p>
+        <h3>Conheça a casa e quem realiza a consulta</h3>
+        <p>
+            Antes de realizar um jogo de búzios, é importante conhecer a casa de santo, sua história e, principalmente, as pessoas responsáveis pela consulta. 
+            Ter confiança em quem irá conduzir o jogo e sentir-se acolhido no espaço faz parte de uma experiência de consulta consciente e respeitosa.
+        </p>
+        </div>
+
+        <div class="carrossel">
+
+            <img class="imagem-atual" src="img1.png" alt="CS">
+             <a class="instagram-link" href="https://www.instagram.com/egbeigbamole/" target="_blank">
+            Veja mais no Instagram
+        </a>
+
+            
+        </div>
+       
+    </section>
+
+    <section class="como-funciona" id="como-funciona">
+
+        <h1>Como funciona a consulta?</h1>
+        <div class="tipos-consulta">
+            <button class="tipo-consulta ativo">30 minutos</button>
+            <button class="tipo-consulta">1 hora</button>
+        </div>
+        <div class="conteudo-consulta">
+            <h3>Consulta de 30 minutos</h3>
+
+            <p>
+            Uma consulta mais objetiva, indicada para quem deseja
+            buscar orientação sobre questões específicas.
+            </p>
+        </div>
+    </section>
+
+    <section class="agendamento" id="agendar">
+
+        <h2>Agende sua consulta</h2>
+
+        <p>
+            Escolha o tipo de consulta e  encontre o melhor horário para você.
+        </p>
+        <div class="opcoes-agendamento">
+            <button class="opcao-agendamento ativo">30 minutos</button>
+            <button class="opcao-agendamento">1 hora</button>
+        </div>  
+
+        <div class="modalidades">
+            <button class="modalidade ativo">Online</button>
+            <button class="modalidade">Presencial</button>
+        </div>       
+       
+
+        <button class="botao-horarios">Ver horários disponíveis</button>
+
+        <div class="calendario">
+            <h3>Escolha a melhor data para você</h3>
+            <div class="cabecalho-calendario">
+                <button class="mes-anterior">←</button>
+                <h3>Junho 2026</h3>
+                <button class="proximo-mes">→</button>
+            </div>
+
+            <div class="dias-da-semana">
+                <span>Seg</span>
+                <span>Ter</span>
+                <span>Qua</span>
+                <span>Qui</span>
+                <span>Sex</span>
+                <span>Sáb</span>
+                <span>Dom</span>
+            </div>
+            <div class="dias"></div>
+            <div class="horarios">Horários</div>
+             </div>
+        <div class="locais-presencial">
+            <button class="local-presencial">Loja - Sto. Amaro</button>
+            <button class="local-presencial">Eldorado - Casa de santo</button>
+
+        </div>
+        <div class="botao-confirmar">
+            <button class="confirmar">Continuar</button>
+        </div>
+        </div>
+        <div class="modal-cadastro">
+            <div class="conteudo-modal">
+                <h2>Seus dados</h2>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="E-mail">
+                <input type="tel" placeholder="Celular">
+                <button class="confirmar-cadastro">Confirmar cadastro</button>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
