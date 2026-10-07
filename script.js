@@ -84,13 +84,10 @@ opcoesAgendamento.forEach(function(opcao){
         }else{
         duracaoSelecionada = 60;
 }
-    const horariosSelecionados = document.querySelectorAll(".horarios button.selecionado");
+    
+    limparHorarios();
+    esconderConfirmar();
 
-    horariosSelecionados.forEach(function(horario){
-
-        limparHorarios();
-
-        });     
     });
 });
 modalidades.forEach(function(modalidade){
@@ -105,7 +102,10 @@ modalidades.forEach(function(modalidade){
        
         modalidade.classList.add("ativo");
 
-         if(modalidade.textContent === "Online"){
+
+        esconderConfirmar();
+
+        if(modalidade.textContent === "Online"){
             locaisPrensencial.style.display = "none";
             limparLocal();
         }else{
@@ -173,6 +173,7 @@ function gerarCalendario() {
             diaSelecionado = dia;
             limparHorarios();
             limparLocal();
+            esconderConfirmar();
             
         
             console.log("Dia selecionado: ", dia);
@@ -308,7 +309,6 @@ botaoHorarios.addEventListener("click", function(){
 const modal = document.querySelector(".modal-cadastro");
 botaoConfirmar.addEventListener("click", function(){
 
-    botaoConfirmar.classList.add("confirmado")
         modal.style.display = "flex";
 
     console.log(duracaoSelecionada);
@@ -346,3 +346,8 @@ function limparLocal(){
 function esconderConfirmar(){
     botaoConfirmar.style.display = "none";
 }
+const fechar = document.querySelector(".fechar-modal");
+
+fechar.addEventListener("click", function(){
+    fechar.style.display = "none";
+});

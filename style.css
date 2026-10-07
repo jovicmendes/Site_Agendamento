@@ -41,15 +41,17 @@ body{
     text-align: center;
 }
 .ac{
+
     color: var(--navy);
     background-color: var(--gold);
-
-    padding: 10px 20px;
+    border: none;
+    padding: 12px 25px;
     border-radius: 25px;
-
-    text-decoration: none;
     font-size: 15px;
-    font-weight: 600px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 
     transition: all 0.3s ease;
 }
@@ -532,14 +534,118 @@ max-width: 350px;
     background-color: var(--gold);
     color: var(--navy);
 }
-.confirmar.confirmado{
-    background-color: var(--gold);
-    color: var(--navy);
+.confirmar:active{
+
+    transform: scale(0.97);
 }
 .modal-cadastro{
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
 }
-@media (max-width: 768px) {
+.conteudo-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--navy);
+    
+
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+.conteudo-modal input{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+
+    border: 1px solid var(--navy-light);
+    border-radius: 10px;
+    padding: 12px 20px;
+    background-color: var(--navy-light);
+
+    color: var(--pearl);
+
+    transition: all 0.2s ease;
+
+}
+.conteudo-modal input:focus{
+    
+    border-color: var(--gold);
+    transform: scale(1.02) translateY(-2px);
+    background-color: var(--navy-light);
+    color: var(--gold);
+
+}
+.conteudo-modal h2{
+
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    font-size: 42px;
+    font-family: inherit;
+    color: var(--pearl);
+
+    margin-bottom: 25px;
+    border-color: var(--pearl) ;
+
+    transition: all 1s ease;
+}
+.confirmar-cadastro{
+    
+
+    padding: 10px 10px;
+
+    border: 1px solid var(--gold);
+    background-color: var(--navy);
+    border-radius: 10px;
+    color: var(--pearl);
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+    
+}
+.confirmar-cadastro:hover{
+    background-color: var(--gold);
+    color: var(--navy);
+}
+.confirmar-cadastro:active{
+
+    transform: scale(0.96);
+}
+.conteudo-modal:has(input:focus) h2{
+    transform: scale(0.60) translateX(-240px) translateY(40px);
+
+}
+.cabecalho-modal{
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--pearl);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    transform-origin: left;
+}
+.conteudo-modal:has(input:focus) .cabecalho-modal{
+    transform: scaleX(1) translateY(-20px);
+}
+@media (max-width: 768px) {s
 
     .hero,
     .sobre,
