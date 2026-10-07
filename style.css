@@ -555,6 +555,7 @@ max-width: 350px;
 }
 .conteudo-modal{
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     gap: 15px;
@@ -644,6 +645,24 @@ max-width: 350px;
 }
 .conteudo-modal:has(input:focus) .cabecalho-modal{
     transform: scaleX(1) translateY(-20px);
+}
+.fechar-modal{
+    position: absolute;
+    top: 25px;
+    right: 15px;
+
+    border: none;
+    background: none;
+
+    color: var(--pearl);
+    font-size: 28px;
+    line-height: 1px;
+
+    cursor: pointer;
+}
+.fechar-modal:hover{
+    color: var(--gold);
+    transform: scale(1.1);
 }
 @media (max-width: 768px) {s
 

@@ -349,5 +349,5 @@ function esconderConfirmar(){
 const fechar = document.querySelector(".fechar-modal");
 
 fechar.addEventListener("click", function(){
-    fechar.style.display = "none";
+    modal.style.display = "none";
 });
