@@ -104,14 +104,6 @@ modalidades.forEach(function(modalidade){
 
 
         esconderConfirmar();
-
-        if(modalidade.textContent === "Online"){
-            locaisPrensencial.style.display = "none";
-            limparLocal();
-        }else{
-            locaisPrensencial.style.display = "flex";
-        }
-
     });
 });
 //Indentificar o horário
@@ -246,12 +238,6 @@ function gerarHorarios() {
 
             const modalidadeSelecionada = document.querySelector(".modalidade.ativo");
 
-            if(modalidadeSelecionada.textContent === "Presencial" && diaSelecionado !== null){
-
-            locaisPrensencial.style.display = "flex";
-            }
-            
-
             horario.classList.add("selecionado");
 
             if(duracaoSelecionada === 60){
@@ -262,9 +248,15 @@ function gerarHorarios() {
             }
             horarioSelecionado = horario.textContent;
 
-            if(modalidadeSelecionada.textContent === "Online"){
+            if(modalidadeSelecionada.textContent === "Online" && diaSelecionado !== null){
 
                 botaoConfirmar.style.display = "flex";
+            }
+            
+            if(modalidadeSelecionada.textContent === "Presencial" && diaSelecionado !== null && horarioSelecionado !== null){
+
+            locaisPrensencial.style.display = "flex";
+
             }
 
             console.log("Horário selecionado: ", horario.textContent);
@@ -285,11 +277,14 @@ locais.forEach(function(local){
 
                 botao.classList.remove("ativo");
             });
+            if(diaSelecionado !== null && horarioSelecionado !== null){
 
             local.classList.add("ativo");
+
+
             botaoConfirmar.style.display = "flex";
             localSelecionado = local.textContent;
-            console.log(localSelecionado);
+            console.log(localSelecionado);}
         });
  });
 
@@ -344,10 +339,25 @@ function limparLocal(){
     localSelecionado = null;
 }
 function esconderConfirmar(){
+
     botaoConfirmar.style.display = "none";
 }
 const fechar = document.querySelector(".fechar-modal");
 
 fechar.addEventListener("click", function(){
     modal.style.display = "none";
+});
+
+const check = document.querySelector(".checkbox");
+const botCad = document.querySelector(".confirmar-cadastro");
+
+check.addEventListener("click", function(){
+
+    if(check.checked){
+        botCad.disabled = false;
+    }
+    else{
+        botCad.disabled = true;
+    }
+
 });

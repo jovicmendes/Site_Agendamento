@@ -631,9 +631,20 @@ max-width: 350px;
 
     transform: scale(0.96);
 }
+.confirmar-cadastro:disabled{
+    border-color: var(--pearl);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.confirmar-cadastro:disabled:hover{
+    background-color: var(--navy-light);
+    color: var(--pearl);
+}
+.confirmar-cadastro:disabled:active{
+    transform: scale(1);
+}
 .conteudo-modal:has(input:focus) h2{
     transform: scale(0.60) translateX(-240px) translateY(40px);
-
 }
 .cabecalho-modal{
     width: 100%;
@@ -664,6 +675,63 @@ max-width: 350px;
     color: var(--gold);
     transform: scale(1.1);
 }
+.consentimento{
+    width: 350px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.consentimento input{
+    display: none;
+    width: auto;
+
+    appearance: none;
+
+    width: 18px;
+    height: 18px;
+
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+
+    cursor: pointer;
+
+}
+.consentimento input:checked + .checkmark{
+    background-color: var(--gold);
+    border-color: var(--pearl);
+}
+.checkmark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    
+    width: 30px;
+    height: 18px;
+
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: all 0.1s ease;
+}
+.checkmark::after{
+
+    content: "✓"; 
+    opacity: 0;
+    font-size: 13px;
+
+}
+.consentimento input:checked + .checkmark::after{
+    opacity: 1;
+}
+.consentimento input:active + .checkmark{
+    transform: scale(0.90);
+}
+
+
 @media (max-width: 768px) {s
 
     .hero,
